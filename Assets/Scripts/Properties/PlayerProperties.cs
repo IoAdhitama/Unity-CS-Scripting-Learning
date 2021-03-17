@@ -39,14 +39,21 @@ public class PlayerProperties
         }
 
         // By inserting some if statement, we can restrict the range of the class variable,
-        // ensuring that the health will never go down below 0
+        // ensuring that the health will never go down below 0.
+        // An example usage of Ternary operator is also in this method.
         set
         {
+            // Below is a standard method of an if-else statement:
+            /* 
             if (value < 0)
             {
                 health = 0;
             }
             else health = value;
+            */
+
+            // While below is the same if-else block, using ternary operator/short hand if-else instead:
+            health = (value < 0) ? health = 0 : health = value;
         }
     }
 
